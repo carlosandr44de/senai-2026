@@ -1,0 +1,133 @@
+Escrever um algoritmo que calcule o salario final de um vendedor, mostre o salário fixo, o valor de vendas e o salario final incluindo a comissão sobre as vendas no mês.
+OBS: O algoritmo devera ler:
+•O nome do vendedor
+•Seu salário fixo
+•O valor das vendas no mes
+•Sua comissão sobre o valor das vendas efetuadas (em percentual)
+•O sistema deverá ter um critério de saída para finalizar o programa
+
+ O SISTEMA DEVERÁ APRESENTAR O SEGUINTE RESULTADO (EXEMPLO)
+
+//---------- SISTEMA DE GESTÃO DE VENDEDORES -----------
+//------------------------------------------------------
+
+//>>> Digite o nome do vendedor: João da Silva
+//>>> Digite o salário: 1200
+//>>> Informe o valor das suas vendas deste no mês: 550
+//>>> Digite a comissão (em percentual): 10
+
+//-------------- R E S U M O --------------
+//-- Nome: João da Silva
+//-- Salário Líquido: 1200.00
+//-- Valor comissão:    55.00
+//-- Salário Final (salário + comissão):1255.00
+//-----------------------------------------
+
+---------------------------------- EXERCÍCIO NÃO SEPARADO POR FUNÇÕES ---------------------------------------
+
+
+programa
+{
+	funcao inicio()
+	{
+		cadeia nome
+		real salario_fixo, valor_vendas, percentual_comissao, valor_comissao, salario_final
+		caracter opcao
+
+		faca
+		{
+			escreva("//---------- sistema de gestao de vendedores-----------\n")
+			escreva("//------------------------------------------------------\n")
+			
+			escreva("//>>> Digite o nome do vendedor: ")
+			leia(nome)
+			
+			escreva("//>>> Digite o salário: ")
+			leia(salario_fixo)
+			
+			escreva("//>>> Informe o valor das suas vendas deste no mês: ")
+			leia(valor_vendas)
+			
+			escreva("//>>> Digite a comissão (em percentual): ")
+			leia(percentual_comissao)
+
+			valor_comissao = valor_vendas * (percentual_comissao / 100)
+			salario_final = salario_fixo + valor_comissao
+
+			escreva("//-------------- resumo --------------\n")
+			escreva("//-- Nome: ", nome, "\n")
+			escreva("//-- Salário Líquido: ", salario_fixo, "\n")
+			escreva("//-- Valor comissão:    ", valor_comissao, "\n")
+			escreva("//-- Salário Final (salário + comissão): ", salario_final, "\n")
+			escreva("//-----------------------------------------\n\n")
+
+			escreva("Deseja cadastrar outro vendedor? (S/N): ")
+			leia(opcao)
+			escreva("\n")
+
+		} enquanto (opcao == 'S' ou opcao == 's')
+
+		escreva("Sistema finalizado com sucesso!\n")
+	}
+}
+
+
+
+-------------------------------- EXRECÍCIO COM FUNÇÃO -----------------------------------------
+
+programa
+{
+		cadeia nome
+		real salario_fixo,
+		valor_vendas, percentual_comissao, valor_comissao, salario_final
+		caracter opcao
+
+ 	funcao entrada_dados(){
+ 	faca
+		{
+			escreva("//---------- sistema de gestao de vendedores-----------\n")
+			escreva("//------------------------------------------------------\n")
+			
+			escreva("//>>> Digite o nome do vendedor: ")
+			leia(nome)
+			
+			escreva("//>>> Digite o salário: ")
+			leia(salario_fixo)
+			
+			escreva("//>>> Informe o valor das suas vendas deste no mês: ")
+			leia(valor_vendas)
+			
+			escreva("//>>> Digite a comissão (em percentual): ")
+			leia(percentual_comissao)
+
+			calcular()
+
+			escreva("Deseja cadastrar outro vendedor? (S/N): ")
+			leia(opcao)
+			escreva("\n")
+
+		} enquanto (opcao == 'S' ou opcao == 's')
+
+		escreva("Sistema finalizado com sucesso!\n")
+ 	}
+
+
+	funcao calcular(){
+	 	valor_comissao = valor_vendas * (percentual_comissao / 100)
+		salario_final = salario_fixo + valor_comissao
+		escreva("//-------------- resumo --------------\n")
+		escreva("//-- Nome: ", nome, "\n")
+		escreva("//-- Salário Líquido: ", salario_fixo, "\n")
+		escreva("//-- Valor comissão:    ", valor_comissao, "\n")
+		escreva("//-- Salário Final (salário + comissão): ", salario_final, "\n")
+		escreva("//-----------------------------------------\n\n")
+
+	}
+
+	funcao inicio()
+	{
+		entrada_dados()
+		escreva("Fim de Programa!")
+
+	}
+}

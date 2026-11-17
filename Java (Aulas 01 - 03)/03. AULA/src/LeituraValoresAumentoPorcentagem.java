@@ -15,7 +15,8 @@ public class LeituraValoresAumentoPorcentagem {
         //null = parametro que é um frame na caixa de diálogo
         //os parâmetro são separados por vírgulas        
         JOptionPane.showMessageDialog(null,
-            "nome: "+nome+"\n"+"email"+email+"\n"+
+            "nome: "+nome+"\n"+
+            "email: "+email+"\n"+
             "salário: "+(salario*1.1));
 
         /* . Exibir uma caixa de confirmação

@@ -4,6 +4,7 @@ public class Entrada {
   public static void main(String[] args) {
    //Leitura-Entrada de Dados
    Scanner leitura = new Scanner(System.in);
+
    System.out.println("Digite seu nome:");
    String nome = leitura.nextLine();
    System.out.println("Digite sua idade");
@@ -12,5 +13,6 @@ public class Entrada {
    double altura = leitura.nextDouble();
    System.out.println("---------------");
    System.out.println(nome+"-"+idade+"-"+"-"+altura);
+   leitura.close();
   }
 }

@@ -1,5 +1,6 @@
 public class TiposJava {
-    //função início
+    // função início
+    // todo programa em Java precisa estar dentro de uma classe
     public static void main(String[] args) {
 
     // ------------> TIPOS PRIMITIVOS (8 tipos)
@@ -39,6 +40,20 @@ public class TiposJava {
 
         // array/matrizes 
 
-        System.out.println();
+        System.out.printf("""
+        ---- TIPOS JAVA ----
+        byte:      %d
+        short:     %d
+        int:       %d
+        long:      %d
+        float:     %.1f
+        double:    %.1f
+        encontrou: %b
+        char:      %c
+        boolean:   %b
+        String:    %s
+        """,
+        bitsByte, bitsShort, bitsInt, bitsLong, bitsFloat, 
+        bitsDouble, encontrou, bitsChar, valorTrue, HelloWorld);
     }
 }

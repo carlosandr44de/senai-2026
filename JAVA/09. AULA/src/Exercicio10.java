@@ -26,12 +26,36 @@ public class Exercicio10 {
 
         int numColunas = matriz[0].length;
 
-        for(int j = 0; j < numColunas; j++) {
+        /*for(int j = 0; j < numColunas; j++) {
             int somaColuna = 0;
             for(int i = 0; i < matriz.length; i++) {
                 somaColuna += matriz[i][j];
             }
             System.out.println("Coluna " + j + ": " + somaColuna);
+        }*/
+
+        for(int i = 0; i < matriz.length; i++) {
+            int somaTotalFunc = 0;
+            for(int j = 0; j < numColunas; j++) {
+                somaTotalFunc += matriz[i][j];
+            }
+            System.out.println("Funcionário " + i + ": " + somaTotalFunc);
         }
+
+        int somaTotal = 0;
+
+        for(int i = 0; i < matriz.length; i++) {
+            for(int j = 0; j < numColunas; j++) {
+                somaTotal += matriz[i][j];
+            }
+        }
+        System.out.println("Total geral: " + somaTotal);
+
+        for(int i = 0; i < matriz.length; i++) {
+            for(int j = 0; j < numColunas; j++) {
+            }
+        }
+
+        sc.close();
     }
 }
